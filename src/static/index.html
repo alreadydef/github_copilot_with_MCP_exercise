@@ -39,6 +39,50 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="session-management-container">
+        <h3>Advisor Session Management</h3>
+        <form id="session-form">
+          <input type="hidden" id="session-id" />
+          <div class="form-group">
+            <label for="session-activity">Activity:</label>
+            <select id="session-activity" required>
+              <option value="">-- Select an activity --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="session-date">Date:</label>
+            <input type="date" id="session-date" required />
+          </div>
+          <div class="time-grid">
+            <div class="form-group">
+              <label for="session-start-time">Start time:</label>
+              <input type="time" id="session-start-time" required />
+            </div>
+            <div class="form-group">
+              <label for="session-end-time">End time:</label>
+              <input type="time" id="session-end-time" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="session-location">Location (optional):</label>
+            <input type="text" id="session-location" placeholder="Room, court, field..." />
+          </div>
+          <div class="button-row">
+            <button type="submit" id="session-submit-btn">Create Session</button>
+            <button type="button" id="session-cancel-btn" class="secondary-btn hidden">Cancel Edit</button>
+          </div>
+        </form>
+
+        <div id="session-message" class="hidden"></div>
+
+        <div class="advisor-sessions-panel">
+          <h4>Existing Sessions</h4>
+          <div id="advisor-sessions-list">
+            <p>Loading sessions...</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
